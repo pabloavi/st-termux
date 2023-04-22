@@ -4,11 +4,11 @@ VERSION = 0.9
 # Customize below to fit your system
 
 # paths
-PREFIX = /usr/local
+PREFIX = /data/data/com.termux/files/usr
 MANPREFIX = $(PREFIX)/share/man
 
-X11INC = /usr/X11R6/include
-X11LIB = /usr/X11R6/lib
+X11INC = /data/data/com.termux/files/usr/include/X11
+X11LIB = /data/data/com.termux/files/usr/lib
 
 PKG_CONFIG = pkg-config
 
@@ -16,7 +16,7 @@ PKG_CONFIG = pkg-config
 INCS = -I$(X11INC) \
        `$(PKG_CONFIG) --cflags fontconfig` \
        `$(PKG_CONFIG) --cflags freetype2`
-LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil -lXft \
+LIBS = -L$(X11LIB) -lm -lX11 -lXft \
        `$(PKG_CONFIG) --libs fontconfig` \
        `$(PKG_CONFIG) --libs freetype2`
 
